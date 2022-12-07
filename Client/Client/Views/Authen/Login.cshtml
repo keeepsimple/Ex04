@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<div class="row"
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h2>Use a local account to log in.</h2>
+                <hr />
+                <div id="error" class="text-danger mb-3"></div>
+                <div class="form-floating">
+                    <input id="username" class="form-control" autocomplete="username" aria-required="true" />
+                    <label for="username" class="form-label">Username</label>
+                </div>
+                <div class="form-floating mt-3 mb-3">
+                    <input id="password" type="password" class="form-control" autocomplete="current-password" aria-required="true" />
+                    <label for="password" class="form-label">Password</label>
+                </div>
+                <div>
+                    <button id="login-submit" class="btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div>
+                    <p>
+                        <a id="forgot-password" href="./ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a href="/Authen/Register">Register as a new user</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h3>Use another service to register.</h3>
+            <hr />
+
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script type="module" src="~/js/login.js"></script>
+}

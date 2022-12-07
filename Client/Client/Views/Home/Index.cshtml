@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="postBlock" class="container" >
+
+</div>
+<nav aria-label="Page navigation example">
+  <ul id="paging" class="pagination">
+  </ul>
+</nav>
+
+@section scripts{
+    <script type="module" src="~/js/home.js"></script>
+    <script type="text/javascript">
+      const module = {}
+    </script>
+    <script type="module">
+        import {changePage} from '../../js/home.js'
+        module.changePage = changePage
+    </script>
+}

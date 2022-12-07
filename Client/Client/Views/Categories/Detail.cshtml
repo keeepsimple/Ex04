@@ -1,0 +1,18 @@
+<div id="postBlock" class="container" >
+
+</div>
+<nav aria-label="Page navigation example">
+  <ul id="paging" class="pagination">
+  </ul>
+</nav>
+
+@section scripts{
+    <script type="module" src="~/js/category.js"></script>
+    <script type="text/javascript">
+      const module = {}
+    </script>
+    <script type="module">
+        import {changePage} from '../../js/category.js'
+        module.changePage = changePage
+    </script>
+}
